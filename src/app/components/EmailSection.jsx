@@ -18,11 +18,15 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
+    // Form the request for sending data to the server.
     const options = {
+      // The method is POST because we are sending data.
       method: "POST",
+      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
+      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
@@ -46,14 +50,16 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I&apos;m seeking new opportunities, and my inbox is always open.
-          Whether you have a question or just want to say hi, I'll make every effort to get back to you!
+          {" "}
+          I&apos;m currently looking for new opportunities, my inbox is always
+          open. Whether you have a question or just want to say hi, I&apos;ll
+          try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/musnymubarak">
+          <Link href="github.com">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/musny-mubarak/">
+          <Link href="linkedin.com">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -78,7 +84,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Your Email"
+                placeholder="jacob@google.com"
               />
             </div>
             <div className="mb-6">
@@ -94,7 +100,7 @@ const EmailSection = () => {
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="What you are going to seek about"
+                placeholder="Just saying hi"
               />
             </div>
             <div className="mb-6">
@@ -113,7 +119,7 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 hover:bg-gradient-to-l text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>
