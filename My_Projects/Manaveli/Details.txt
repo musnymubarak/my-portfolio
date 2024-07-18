@@ -1,0 +1,5 @@
+Manaveli Mental Health Platform
+Designed and developed Manaveli, a modern mental health information platform for Sri Lanka. The website provides accessible mental health information, condition guides, facts and articles, resources, media content, and an interactive WHO-5 self-check experience. I focused on creating a clean, accessible and responsive user experience with intuitive navigation, multilingual support, and privacy-conscious interactions. The project combines thoughtful UI design with practical functionality to make mental health information easier to access.
+
+Industries : Health & Wellness
+URL : https://manaveli.org.lk/

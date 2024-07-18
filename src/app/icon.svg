@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Mohamed Musni">
+  <rect width="512" height="512" rx="116" fill="#090b10" />
+  <rect x="10" y="10" width="492" height="492" rx="108" fill="none" stroke="#2dd4a7" stroke-width="10" opacity="0.28" />
+  <path d="M136 372 V140 L256 276 L376 140 V372"
+        fill="none" stroke="#2dd4a7" stroke-width="46"
+        stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="136" cy="140" r="16" fill="#a5f3dc" />
+  <circle cx="376" cy="140" r="16" fill="#a5f3dc" />
+  <circle cx="256" cy="276" r="16" fill="#a5f3dc" />
+</svg>

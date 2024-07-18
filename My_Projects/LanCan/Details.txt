@@ -1,0 +1,5 @@
+LanCan Immigration – Modern Business Website
+Designed and developed a modern, responsive website for a Canadian immigration consultancy. Built both the frontend and backend, including a dynamic news management system that allows the client to create, edit, publish, and manage immigration-related articles directly from the admin panel. The website was designed for a professional user experience across desktop and mobile devices.
+
+Industries : Legal & Immigration Service
+URL :  https://lancanimmigration.com/

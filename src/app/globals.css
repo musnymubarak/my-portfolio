@@ -1,33 +1,522 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* ==========================================================================
+   Design tokens — "Control Plane"
+   A dark, instrument-panel visual identity for a platform / DevOps engineer.
+   One restrained signal accent (jade) on a cool near-black neutral ramp.
+   ========================================================================== */
+
+@theme {
+  /* Neutral ramp — cool near-black through hairline greys */
+  --color-base-950: #05070a;
+  --color-base-900: #090b10;
+  --color-base-850: #0d1016;
+  --color-base-800: #12161e;
+  --color-base-750: #171c25;
+  --color-base-700: #1e242f;
+  --color-base-600: #2b323f;
+  --color-base-500: #3d4553;
+
+  /* Foreground ramp */
+  --color-ink-50: #ffffff;
+  --color-ink-100: #f3f5f8;
+  --color-ink-200: #dfe3ea;
+  --color-ink-300: #b9c0cd;
+  --color-ink-400: #8f98a8;
+  --color-ink-500: #828b9d;
+  --color-ink-600: #767f92;
+
+  /* Signal accent — health/uptime jade */
+  --color-signal-200: #a5f3dc;
+  --color-signal-300: #6ee7c4;
+  --color-signal-400: #2dd4a7;
+  --color-signal-500: #14b98c;
+  --color-signal-600: #0d9271;
+
+  /* Secondary accent — used sparingly for emphasis */
+  --color-amber-400: #f5b544;
+  --color-amber-500: #e09a1f;
+
+  /* Typography */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* Content width */
+  --spacing-shell: 76rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Semantic aliases used across components */
+@layer base {
+  /* ========================================================================
+     Themes
+
+     Every token is declared once with light-dark(), which resolves against the
+     computed `color-scheme`. The root allows both, so with no explicit choice
+     the theme follows the operating system with no JavaScript and no flash.
+     An explicit choice pins `color-scheme`, which flips every token at once.
+
+     The ramp keeps its ROLE across themes rather than its lightness:
+     base-950 is always the page, base-900 always a raised card, ink-100 always
+     the strongest text. That is why the components did not need rewriting.
+     ======================================================================== */
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    color-scheme: light dark;
+
+    --color-base-950: light-dark(#ffffff, #05070a);
+    --color-base-900: light-dark(#f7f8fa, #090b10);
+    --color-base-850: light-dark(#f1f3f7, #0d1016);
+    --color-base-800: light-dark(#e8ebf1, #12161e);
+    --color-base-750: light-dark(#dfe3ea, #171c25);
+    --color-base-700: light-dark(#d2d8e1, #1e242f);
+    --color-base-600: light-dark(#b3bcc9, #2b323f);
+    --color-base-500: light-dark(#939daf, #3d4553);
+
+    --color-ink-50: light-dark(#05070a, #ffffff);
+    --color-ink-100: light-dark(#0e131b, #f3f5f8);
+    --color-ink-200: light-dark(#1c2430, #dfe3ea);
+    --color-ink-300: light-dark(#333d4c, #b9c0cd);
+    --color-ink-400: light-dark(#4a5566, #8f98a8);
+    --color-ink-500: light-dark(#586475, #828b9d);
+    --color-ink-600: light-dark(#5e6a7a, #767f92);
+
+    /* Jade at #2dd4a7 sits near 1.8:1 on white, so the light theme uses a
+       deeper jade of the same hue. Every value here clears AA on every
+       surface it can appear on. */
+    --color-signal-200: light-dark(#04503c, #a5f3dc);
+    --color-signal-300: light-dark(#066048, #6ee7c4);
+    --color-signal-400: light-dark(#07795b, #2dd4a7);
+    --color-signal-500: light-dark(#0a8f6c, #14b98c);
+    --color-signal-600: light-dark(#0da97f, #0d9271);
+
+    --color-amber-400: light-dark(#8a5a06, #f5b544);
+    --color-amber-500: light-dark(#6f4805, #e09a1f);
+
+    /* Derived from ink-100, so these invert with the theme automatically. */
+    --hairline: color-mix(in oklab, var(--color-ink-100) 9%, transparent);
+    --hairline-strong: color-mix(in oklab, var(--color-ink-100) 16%, transparent);
+    --surface: color-mix(in oklab, var(--color-base-850) 88%, transparent);
+    --surface-raised: color-mix(in oklab, var(--color-base-800) 92%, transparent);
+    --glow-signal: color-mix(in oklab, var(--color-signal-400) 22%, transparent);
+
+    /* Card shadow: heavy on dark, barely there on light. */
+    --shadow-card: light-dark(0 24px 60px -30px rgb(15 23 42 / 0.28), 0 24px 60px -30px rgb(0 0 0 / 0.9));
+
+    /* Reserved by the fixed header so anchors and skip-links land correctly */
+    scroll-padding-top: 6rem;
+  }
+
+  /* An explicit choice pins the scheme, which is what light-dark() reads. */
+  :root[data-theme='light'] {
+    color-scheme: light;
+  }
+
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--hairline);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-base-950);
+    color: var(--color-ink-200);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink-100);
+    text-wrap: balance;
+    letter-spacing: -0.022em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, consistent focus ring everywhere */
+  :focus-visible {
+    outline: 2px solid var(--color-signal-400);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-signal-400) 30%, transparent);
+    color: var(--color-ink-50);
+  }
+
+  /* Firefox scrollbar */
+  html {
+    scrollbar-color: var(--color-base-700) transparent;
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-base-950);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-base-700);
+    border-radius: 999px;
+    border: 2px solid var(--color-base-950);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-base-600);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* ==========================================================================
+   Component primitives
+   ========================================================================== */
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: var(--spacing-shell);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Eyebrow / section label with leading rule */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ink-400);
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      var(--color-signal-400),
+      color-mix(in oklab, var(--color-signal-400) 10%, transparent)
+    );
+  }
+
+  /* Surface card */
+  .card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  /* Subtle blueprint grid used behind hero + section breaks */
+  .grid-field {
+    background-image:
+      linear-gradient(to right, var(--hairline) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--hairline) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .prose-technical {
+    color: var(--color-ink-300);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .prose-technical > * + * {
+    margin-top: 1.25rem;
+  }
+
+  .prose-technical h2 {
+    margin-top: 2.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: var(--color-ink-100);
+  }
+
+  .prose-technical h3 {
+    margin-top: 2rem;
+    font-size: 1.1875rem;
+    line-height: 1.4;
+    color: var(--color-ink-100);
+  }
+
+  .prose-technical strong {
+    color: var(--color-ink-100);
+    font-weight: 600;
+  }
+
+  /* Matches both a list inside the prose block and the class applied
+     directly to a list, which several pages do. */
+  :is(.prose-technical ul, ul.prose-technical) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  :is(.prose-technical ul, ul.prose-technical) > li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  :is(.prose-technical ul, ul.prose-technical) > li + li {
+    margin-top: 0.625rem;
+  }
+
+  :is(.prose-technical ul, ul.prose-technical) > li::before {
+    content: '';
+    position: absolute;
+    left: 0.125rem;
+    top: 0.72em;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--color-signal-400);
+  }
+
+  :is(.prose-technical ol, ol.prose-technical) {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+
+  :is(.prose-technical ol, ol.prose-technical) > li::marker {
+    color: var(--color-signal-400);
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  :is(.prose-technical ol, ol.prose-technical) > li + li {
+    margin-top: 0.625rem;
+  }
+
+  .prose-technical a {
+    color: var(--color-signal-300);
+    text-underline-offset: 3px;
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in oklab, var(--color-signal-300) 40%, transparent);
+  }
+
+  .prose-technical a:hover {
+    text-decoration-color: var(--color-signal-300);
+  }
+
+  .prose-technical code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--color-base-800);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-xs);
+    padding: 0.125em 0.375em;
+    color: var(--color-signal-200);
+  }
+
+  .prose-technical blockquote {
+    border-left: 2px solid var(--color-signal-400);
+    padding-left: 1.25rem;
+    color: var(--color-ink-200);
+    font-style: normal;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+@utility text-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-50) 0%,
+    color-mix(in oklab, var(--color-ink-100) 62%, var(--color-base-600)) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hides content visually but keeps it available to screen readers */
+@utility sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Motion preferences — every animation in the app defers to this
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.85);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Scroll reveals
+
+   Content is visible by default. The hidden starting state applies only where
+   `scripting: enabled` matches, so a visitor with JavaScript disabled — or on
+   a browser that does not support the query — sees every section rather than a
+   blank page waiting on an observer that will never run.
+
+   This is a media feature rather than a class set by an inline script, which
+   keeps the server and client markup byte-identical and puts nothing in <head>
+   for a browser extension to collide with during hydration.
+   ========================================================================== */
+
+/* Structural, and needed whether or not the animation runs. */
+.word-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(var(--reveal-y, 18px));
+    transition:
+      opacity 0.55s var(--ease-out-expo) var(--reveal-delay, 0ms),
+      transform 0.55s var(--ease-out-expo) var(--reveal-delay, 0ms);
+  }
+
+  .reveal[data-revealed='true'] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Word-by-word headline reveal */
+  .word-reveal .word-mask > span {
+    display: inline-block;
+    transform: translateY(105%);
+    transition: transform 0.7s var(--ease-out-expo) var(--word-delay, 0ms);
+  }
+
+  .word-reveal[data-revealed='true'] .word-mask > span {
+    transform: none;
+  }
+
+  /* Page transition, played on mount only. */
+  .page-enter {
+    animation: page-enter 0.26s var(--ease-out-expo) both;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal[data-revealed='true'] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .word-reveal .word-mask > span {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .page-enter {
+    animation: none !important;
   }
 }

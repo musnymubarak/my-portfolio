@@ -1,0 +1,32 @@
+1. Short Summary (Ideal for Portfolio Grid / Project Cards)
+Daily Grocer — Full-Stack Multi-Store E-Commerce & Rapid Delivery Platform
+A high-performance, omnichannel grocery delivery platform built with a server-driven UI architecture. Features multi-store geolocation routing, dynamic CMS-managed promotional sections, real-time inventory management, Stripe payment processing, and a companion Flutter mobile application.
+
+2. In-Depth Project Case Study (Ideal for Personal Portfolio / Website)
+Project Overview
+Daily Grocer is a modern on-demand e-commerce platform designed to bridge independent convenience stores and local customers. The platform delivers an end-to-end shopping experience: from instant store discovery and smart delivery fee calculations to seamless checkout, real-time inventory tracking, and full admin order orchestration.
+
+Key Features
+Server-Driven Home & CMS Engine: Built a dynamic layout management system allowing marketing teams to configure hero carousels, category grids, promo banners, and product showcases in real-time without app re-deployments.
+Multi-Store Geolocation & Delivery Radius: Computes distance-based delivery tiers, store operating hours, and localized stock availability based on customer postcodes.
+Omnichannel Architecture: Unified FastAPI backend serving responsive web storefronts, administrative dashboards, and native iOS/Android mobile clients.
+Streamlined Checkout & Payment: Integrated Stripe for secure card transactions, alongside automated order lifecycle state machines (pending, preparing, dispatched, delivered).
+High-Performance Caching & Async Pipelines: Redis-backed caching for millisecond response times on high-traffic catalog pages, combined with Celery background workers for email receipts, stock alerts, and periodic cleanup.
+3. Resume / CV Bullet Points
+Designed and implemented a full-stack e-commerce grocery platform with React 18, TypeScript, Tailwind CSS, FastAPI, and PostgreSQL.
+Engineered a server-driven UI architecture (SDUI) that dynamically renders marketing banners, carousels, and promotional grids driven by admin CMS configurations.
+Integrated Redis caching layers and Celery async workers, reducing catalog response times by over 60% under concurrent loads.
+Integrated Stripe Payments API and distance-based delivery algorithms to handle real-time fee calculation and seamless order processing.
+Containerized the full ecosystem (Frontend, Admin, Backend, Postgres, Redis, Celery, Nginx) using Docker Compose for continuous deployment.
+4. Technical Architecture & Stack
+Layer	Technologies
+Frontend Storefront	React 18, TypeScript, Vite, Tailwind CSS, Framer Motion, Lucide Icons
+Mobile App	Flutter / Dart (Cross-platform iOS & Android)
+Backend & APIs	FastAPI (Python 3.11+), SQLAlchemy 2 (Async), Pydantic v2
+Database & Cache	PostgreSQL 15, Redis 7 (Caching, Sessions & Broker)
+Background Tasks	Celery & Celery Beat
+DevOps & Infra	Docker, Docker Compose, Nginx (Reverse Proxy & SSL), Linux VPS
+Integrations	Stripe API, Google Maps Platform
+
+
+URL : https://dailygrocer.co.uk/

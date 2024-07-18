@@ -1,0 +1,5 @@
+Luwenza B2B E-Commerce Platform
+A modern B2B e-commerce platform for Luwenza International, enabling international buyers to explore premium Sri Lankan products, submit inquiries, and connect with the company. The platform includes a custom admin dashboard for managing products, categories, inquiries, customers, banners, users, and business reports.
+
+Industries : Agriculture, Import & Export Services
+URL : https://www.luwenza.com/

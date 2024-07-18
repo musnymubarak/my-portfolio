@@ -1,0 +1,382 @@
+{
+  "projects": {
+    "daily-grocer": [
+      {
+        "src": "/images/projects/daily-grocer/01.webp",
+        "source": "Screenshot 2026-09-03 121609.png",
+        "width": 1600,
+        "height": 812,
+        "orientation": "landscape",
+        "kb": 117
+      },
+      {
+        "src": "/images/projects/daily-grocer/02.webp",
+        "source": "Screenshot 2026-09-03 115914.png",
+        "width": 1600,
+        "height": 799,
+        "orientation": "landscape",
+        "kb": 68
+      },
+      {
+        "src": "/images/projects/daily-grocer/03.webp",
+        "source": "Screenshot 2026-09-03 121617.png",
+        "width": 1600,
+        "height": 813,
+        "orientation": "landscape",
+        "kb": 123
+      },
+      {
+        "src": "/images/projects/daily-grocer/04.webp",
+        "source": "Screenshot 2026-09-03 121659.png",
+        "width": 1600,
+        "height": 862,
+        "orientation": "landscape",
+        "kb": 87
+      },
+      {
+        "src": "/images/projects/daily-grocer/05.webp",
+        "source": "Screenshot 2026-09-03 121709.png",
+        "width": 1600,
+        "height": 872,
+        "orientation": "landscape",
+        "kb": 23
+      },
+      {
+        "src": "/images/projects/daily-grocer/06.webp",
+        "source": "Mobile_2.jpeg",
+        "width": 720,
+        "height": 1557,
+        "orientation": "portrait",
+        "kb": 94
+      },
+      {
+        "src": "/images/projects/daily-grocer/07.webp",
+        "source": "Mobile_1.jpeg",
+        "width": 720,
+        "height": 1557,
+        "orientation": "portrait",
+        "kb": 62
+      },
+      {
+        "src": "/images/projects/daily-grocer/08.webp",
+        "source": "Mobile_3.jpeg",
+        "width": 720,
+        "height": 1557,
+        "orientation": "portrait",
+        "kb": 63
+      },
+      {
+        "src": "/images/projects/daily-grocer/09.webp",
+        "source": "Mobile_4.jpeg",
+        "width": 720,
+        "height": 1557,
+        "orientation": "portrait",
+        "kb": 31
+      }
+    ],
+    "sumaiya-college-erp": [
+      {
+        "src": "/images/projects/sumaiya-college-erp/01.webp",
+        "source": "Screenshot 2026-09-03 115451.png",
+        "width": 1600,
+        "height": 797,
+        "orientation": "landscape",
+        "kb": 76
+      }
+    ],
+    "manaveli": [
+      {
+        "src": "/images/projects/manaveli/01.webp",
+        "source": "Screenshot 2026-09-01 171930.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 160
+      },
+      {
+        "src": "/images/projects/manaveli/02.webp",
+        "source": "Screenshot 2026-09-01 171952.png",
+        "width": 1600,
+        "height": 799,
+        "orientation": "landscape",
+        "kb": 50
+      },
+      {
+        "src": "/images/projects/manaveli/03.webp",
+        "source": "Screenshot 2026-09-01 172009.png",
+        "width": 1600,
+        "height": 804,
+        "orientation": "landscape",
+        "kb": 51
+      },
+      {
+        "src": "/images/projects/manaveli/04.webp",
+        "source": "Screenshot 2026-09-01 172022.png",
+        "width": 1600,
+        "height": 803,
+        "orientation": "landscape",
+        "kb": 55
+      },
+      {
+        "src": "/images/projects/manaveli/05.webp",
+        "source": "Screenshot 2026-09-01 172047.png",
+        "width": 1600,
+        "height": 804,
+        "orientation": "landscape",
+        "kb": 46
+      }
+    ],
+    "blue-ocean-adventures": [
+      {
+        "src": "/images/projects/blue-ocean-adventures/01.webp",
+        "source": "Screenshot 2026-09-02 111308.png",
+        "width": 1600,
+        "height": 793,
+        "orientation": "landscape",
+        "kb": 29
+      },
+      {
+        "src": "/images/projects/blue-ocean-adventures/02.webp",
+        "source": "Screenshot 2026-09-02 111340.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 60
+      },
+      {
+        "src": "/images/projects/blue-ocean-adventures/03.webp",
+        "source": "Screenshot 2026-09-02 111356.png",
+        "width": 1600,
+        "height": 794,
+        "orientation": "landscape",
+        "kb": 48
+      },
+      {
+        "src": "/images/projects/blue-ocean-adventures/04.webp",
+        "source": "Screenshot 2026-09-02 111409.png",
+        "width": 1600,
+        "height": 797,
+        "orientation": "landscape",
+        "kb": 31
+      }
+    ],
+    "luwenza": [
+      {
+        "src": "/images/projects/luwenza/01.webp",
+        "source": "Screenshot 2026-09-02 112926.png",
+        "width": 1600,
+        "height": 804,
+        "orientation": "landscape",
+        "kb": 54
+      },
+      {
+        "src": "/images/projects/luwenza/02.webp",
+        "source": "Screenshot 2026-09-02 112946.png",
+        "width": 1600,
+        "height": 803,
+        "orientation": "landscape",
+        "kb": 42
+      },
+      {
+        "src": "/images/projects/luwenza/03.webp",
+        "source": "Screenshot 2026-09-02 112957.png",
+        "width": 1600,
+        "height": 801,
+        "orientation": "landscape",
+        "kb": 77
+      },
+      {
+        "src": "/images/projects/luwenza/04.webp",
+        "source": "Screenshot 2026-09-02 113015.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 106
+      },
+      {
+        "src": "/images/projects/luwenza/05.webp",
+        "source": "Screenshot 2026-09-02 113038.png",
+        "width": 1600,
+        "height": 803,
+        "orientation": "landscape",
+        "kb": 49
+      }
+    ],
+    "vma-studio": [
+      {
+        "src": "/images/projects/vma-studio/01.webp",
+        "source": "Screenshot 2026-09-01 171618.png",
+        "width": 1600,
+        "height": 802,
+        "orientation": "landscape",
+        "kb": 83
+      },
+      {
+        "src": "/images/projects/vma-studio/02.webp",
+        "source": "Screenshot 2026-09-01 171631.png",
+        "width": 1600,
+        "height": 797,
+        "orientation": "landscape",
+        "kb": 41
+      },
+      {
+        "src": "/images/projects/vma-studio/03.webp",
+        "source": "Screenshot 2026-09-01 171647.png",
+        "width": 1600,
+        "height": 805,
+        "orientation": "landscape",
+        "kb": 84
+      }
+    ],
+    "wakeup-health": [
+      {
+        "src": "/images/projects/wakeup-health/01.webp",
+        "source": "Screenshot 2026-09-01 182118.png",
+        "width": 1600,
+        "height": 807,
+        "orientation": "landscape",
+        "kb": 99
+      },
+      {
+        "src": "/images/projects/wakeup-health/02.webp",
+        "source": "Screenshot 2026-09-01 182139.png",
+        "width": 1600,
+        "height": 802,
+        "orientation": "landscape",
+        "kb": 62
+      },
+      {
+        "src": "/images/projects/wakeup-health/03.webp",
+        "source": "Screenshot 2026-09-01 182153.png",
+        "width": 1600,
+        "height": 792,
+        "orientation": "landscape",
+        "kb": 80
+      },
+      {
+        "src": "/images/projects/wakeup-health/04.webp",
+        "source": "Screenshot 2026-09-01 182205.png",
+        "width": 1600,
+        "height": 803,
+        "orientation": "landscape",
+        "kb": 51
+      },
+      {
+        "src": "/images/projects/wakeup-health/05.webp",
+        "source": "Screenshot 2026-09-01 182223.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 41
+      }
+    ],
+    "lancan-immigration": [
+      {
+        "src": "/images/projects/lancan-immigration/01.webp",
+        "source": "Screenshot 2026-09-01 170001.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 59
+      },
+      {
+        "src": "/images/projects/lancan-immigration/02.webp",
+        "source": "Screenshot 2026-09-01 170033.png",
+        "width": 1600,
+        "height": 799,
+        "orientation": "landscape",
+        "kb": 48
+      },
+      {
+        "src": "/images/projects/lancan-immigration/03.webp",
+        "source": "Screenshot 2026-09-01 170112.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 17
+      }
+    ],
+    "aeonic-bio": [
+      {
+        "src": "/images/projects/aeonic-bio/01.webp",
+        "source": "Screenshot 2026-09-01 182614.png",
+        "width": 1600,
+        "height": 805,
+        "orientation": "landscape",
+        "kb": 166
+      },
+      {
+        "src": "/images/projects/aeonic-bio/02.webp",
+        "source": "Screenshot 2026-09-01 182633.png",
+        "width": 1600,
+        "height": 800,
+        "orientation": "landscape",
+        "kb": 31
+      },
+      {
+        "src": "/images/projects/aeonic-bio/03.webp",
+        "source": "Screenshot 2026-09-01 182650.png",
+        "width": 1600,
+        "height": 810,
+        "orientation": "landscape",
+        "kb": 30
+      }
+    ],
+    "kasis-chicken": [
+      {
+        "src": "/images/projects/kasis-chicken/01.webp",
+        "source": "Screenshot 2026-09-01 165442.png",
+        "width": 1600,
+        "height": 790,
+        "orientation": "landscape",
+        "kb": 69
+      },
+      {
+        "src": "/images/projects/kasis-chicken/02.webp",
+        "source": "Screenshot 2026-09-01 165449.png",
+        "width": 1600,
+        "height": 860,
+        "orientation": "landscape",
+        "kb": 66
+      },
+      {
+        "src": "/images/projects/kasis-chicken/03.webp",
+        "source": "Screenshot 2026-09-01 165514.png",
+        "width": 1600,
+        "height": 798,
+        "orientation": "landscape",
+        "kb": 28
+      }
+    ]
+  },
+  "profile": [
+    {
+      "src": "/images/profile/portrait.webp",
+      "width": 1254,
+      "height": 1254,
+      "kb": 99,
+      "role": "master — square portrait"
+    },
+    {
+      "src": "/images/profile/avatar.webp",
+      "width": 874,
+      "height": 875,
+      "kb": 68,
+      "role": "master — avatar crop"
+    }
+  ],
+  "resumes": [
+    {
+      "file": "/resume/Mohamed-Musni-DevOps-Engineer-CV.pdf",
+      "kb": 297
+    },
+    {
+      "file": "/resume/Mohamed-Musni-Software-Engineer-CV.pdf",
+      "kb": 298
+    },
+    {
+      "file": "/resume/Mohamed-Musni-Full-Stack-CV.pdf",
+      "kb": 220
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+1. Short Overview (Portfolio Card / Project Grid)
+Sumaiya College ERP — Comprehensive Academic & Financial Management System
+A full-stack, enterprise-grade institutional ERP built for Sumaiya Ladies Arabic College to automate academic operations, multi-tier role-based access control, fee processing, attendance tracking, double-entry financial reporting, and inventory management.
+Tech Stack: React 18 (TypeScript), Tailwind CSS, Node.js/Express, PostgreSQL, Prisma ORM, Docker & Nginx.
+
+2. Comprehensive Case Study (Project Details Modal / Showcase Page)
+Project Overview
+Sumaiya College ERP (EduManage) is a production-deployed, full-stack management platform engineered to streamline and digitize day-to-day operations for an educational institution. It replaces manual paperwork and disparate spreadsheets with a unified, role-secured centralized system catering to hundreds of students, faculty, and administrative staff.
+
+Key Features & Modules
+Role-Based Access Control (RBAC): Granular access management for Super Admins, Principals, Vice Principals, Administrative Staff, and Financial Officers with JWT-based authentication.
+Academic Administration: Complete student life-cycle management (admissions, class allocations, medical histories, parent/guardian registries, and document archives) alongside faculty profiles and schedule management.
+Attendance & Examination Engine: Daily biometric/manual student and teacher attendance logging, grade entry, exam term scheduling, and automated PDF report card generation.
+Enterprise Financial Suite: Comprehensive ledger accounting including student tuition/fee scheduling, partial payment tracking, banking transactions, income/expenditure tracking, and automated balance sheet reports.
+Inventory & Resource Control: Real-time asset auditing, supply tracking (desks, media supplies, lab tools), and low-stock alerts.
+Administrative Task Hub & Analytics: Interactive operational dashboards with real-time statistics, audit logs, and notification-driven administrative todo lists.
+Technical Highlights & Architecture
+Frontend Architecture: Built using React 18, TypeScript, Tailwind CSS, Lucide Icons, and React Query for performant client-side caching and responsive, accessible UI.
+Backend Architecture: RESTful micro-service style API built with Node.js, Express, and Prisma ORM, strictly typed with TypeScript.
+Data Integrity & Security: Relational data modeling in PostgreSQL with foreign keys, transactional queries for financial operations, password hashing with Bcrypt, and protected routes.
+DevOps & Production Deployment: Containerized with Docker and Docker Compose, reverse-proxied via Nginx with automated SSL and persistent volume storage.
+3. Bullet Points for Resume / CV
+Engineered and deployed a production-grade Institutional ERP serving an active college, managing student records, faculty schedules, inventory, and automated academic report generation.
+Designed a robust financial module supporting tuition payment tracking, bank transfers, income/expenditure ledgers, and automated balance sheet generation.
+Implemented multi-tier Role-Based Access Control (RBAC) across 5 user roles using JWT and custom middleware to protect sensitive administrative and financial endpoints.
+Optimized application performance using Vite, React Query caching, and indexed PostgreSQL queries via Prisma ORM, reducing client load times by over 40%.
+Containerized full stack with Docker & Docker Compose, configuring Nginx reverse proxy, SSL termination, and volume persistence for high-availability production deployment.
+4. Quick Tech Badge / Tag Cloud
+React 18 • TypeScript • Node.js • Express.js • PostgreSQL • Prisma ORM • Tailwind CSS • Docker • Nginx • REST APIs • JWT & RBAC

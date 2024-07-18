@@ -1,0 +1,5 @@
+Kasi’s Chicken – Modern Restaurant Website
+Designed and developed a modern, responsive restaurant website for Kasi’s Chicken, featuring an engaging homepage, interactive menu, food categories, promotional sections, and clear call-to-action elements. The website is optimized for a smooth and user-friendly experience across desktop and mobile devices.
+
+Industry : Restaurants
+URL : https://kasischicken.com/

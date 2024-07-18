@@ -1,0 +1,48 @@
+PROFESSIONAL SUMMARY
+Software engineer who builds production backend services and runs the infrastructure they deploy to. Writes REST APIs in Python (FastAPI) and Node.js/TypeScript, builds React/Next.js interfaces against them, and owns multi-cluster Kubernetes, Terraform IaC and GitLab CI/CD in a live production environment at Hashnate. Takes a feature from API design through tests, container build, pipeline, deployment and production debugging, and picks up unfamiliar languages and platforms quickly. Strong Linux and Git fundamentals.
+TECHNICAL SKILLS
+Backend : Python (FastAPI), Node.js / Express, TypeScript, Go, Java (Springboot), REST API design, microservices
+Frontend : React, Next.js 15, TypeScript, JavaScript, Tailwind CSS
+Infrastructure : Kubernetes, Docker, ArgoCD (GitOps), AWS, Microsoft Azure, Oracle Cloud, Linux / Ubuntu administration
+Database : PostgreSQL, MongoDB, MySQL / MariaDB
+CI/CD & IaC : GitLab CI/CD, GitHub Actions, Terraform, mobile release automation (TestFlight, Google Play)
+Observability : Prometheus, Grafana, metric- and log-driven production debugging
+EXPERIENCE
+Hashnate — Junior DevOps Engineer Jul 2026 – Present
+●
+Operate several production Kubernetes clusters, deploying and reconciling workloads through ArgoCD GitOps across staging and production.
+●
+Build and maintain GitLab CI/CD pipelines across backend services, frontend applications and Terraform IaC repositories — build, test, containerise, deploy.
+●
+Author and maintain reusable Terraform modules so environments are provisioned identically and changes are reviewable in Git.
+●
+Debug production issues across the application, pipeline and cluster layers, working directly with developers to shorten the feedback loop between commit and running code.
+●
+Built a document intelligence and risk-analysis platform using RAG and Google Gemini, with a custom machine-learning model for automated risk detection.
+●
+Contributed to a blockchain-based contract drafting and storage system, developing components in Go for the blockchain environment.
+Hashnate — DevOps Intern Jan 2026 – Jul 2026
+●
+Containerized backend and frontend applications using Docker and developed CI/CD pipelines to automate builds, testing, Docker image creation, and deployment workflows across development and staging environments.
+●
+Managed automated mobile release pipelines, handling iOS build configuration, signing, and TestFlight distribution, while contributing to Android release automation and deployment workflows.
+PROJECTS
+DevBoard — Jira-style task tracker, microservices architecture Node.js · TypeScript · Next.js · K8s · AWS
+●
+Designed and built a developer task tracker as 8 Node.js / TypeScript microservices with a Next.js 15 front end.
+●
+Defined service boundaries and the REST contracts between them; each service is independently containerised and deployable.
+●
+Provisioned the AWS environment with Terraform and ran the services on Kubernetes — a four-layer stack of Terraform → AWS → Kubernetes → services — and documented the architecture as an interactive guide for other engineers.
+n8n Automation Platform — self-hosted deployment with observability OCI · Prometheus · Grafana
+●
+Deployed and administered self-hosted n8n on Oracle Cloud Linux VMs with Docker — systemd services, patching, SSH hardening.
+●
+Instrumented the host and services with Prometheus and built Grafana dashboards for CPU, memory, service health and uptime.
+EDUCATION
+BSc (Hons) in Information Technology — University of Jaffna Oct 2022 – Jul 2026
+CERTIFICATIONS
+Meta Full-Stack Engineer Certificate · Applied Software Engineering Fundamentals · AWS Educate — Cloud Computing
+REFERENCES
+Dr. S. Kirushanth — Senior Lecturer, University of Vavuniya · SivaramalingamK@vau.ac.lk
+Mr. A.S.M. Ifam — Co-Founder, Shades IT Solution · ifam@shadesit.com

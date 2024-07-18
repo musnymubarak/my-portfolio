@@ -1,0 +1,4 @@
+Designed and developed a modern, responsive website for WakeUp Health Organization, a Canadian non-profit focused on accessible health and community support. Built pages for programs, events, community initiatives, organizational information, and contact services. Integrated a secure PayPal donation system with one-time and recurring donation options, allowing supporters to contribute directly online. Created a user-friendly interface with responsive layouts, interactive sections, Google Maps integration, and clear donation-focused calls to action.
+
+Industries : Health & Wellness
+URL : https://wakeuphealth.org/
