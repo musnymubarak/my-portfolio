@@ -42,7 +42,7 @@ const HeroSection = () => {
           <div>
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:bg-gradient-to-l hover:from-purple-600 hover:via-pink-600 hover:to-red-600 text-white transition duration-300"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 hover:bg-gradient-to-l hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white transition duration-300"
             >
               Hire Me
             </Link>
@@ -62,6 +62,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
+            <br/>
           <div className="rounded-full bg-[#202020] w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] relative border-2 border-primary-500">
             <Image
               src="/images/Musny.png"
