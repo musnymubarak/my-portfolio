@@ -11,7 +11,6 @@ const TAB_DATA = [
             <div className="flex flex-wrap gap-4">
                 <span className="bg-gray-800 px-3 py-1 rounded-full">Node.js</span>
                 <span className="bg-gray-800 px-3 py-1 rounded-full">Express</span>
-                <span className="bg-gray-800 px-3 py-1 rounded-full">Java</span>
                 <span className="bg-gray-800 px-3 py-1 rounded-full">PHP</span>
                 <span className="bg-gray-800 px-3 py-1 rounded-full">SQL & No SQL</span>
                 <span className="bg-gray-800 px-3 py-1 rounded-full">JavaScript</span>
