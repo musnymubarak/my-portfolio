@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-10 lg:px-7">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -25,7 +25,7 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
+                "App Developer",
                 1000,
                 "UI/UX Designer",
                 1000,
@@ -36,7 +36,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          IT Undergraduate | Tech Enthusiast | Full Stack Developer | MERN
+          Bringing Your Concepts to Life – I’m Musny Mubarak, a 
+          specialist in Web Development, UI/UX Design, 
+          and App Development.
           </p>
           <div>
             <Link
@@ -62,7 +64,7 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
             <br/>
-          <div className="rounded-full bg-[#202020] w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] relative border-2 border-primary-500">
+          <div className="rounded-full bg-gray-800 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] relative border-2 border-primary-500">
             <Image
               src="/images/Musny.png"
               alt="Musny image"

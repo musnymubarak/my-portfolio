@@ -58,16 +58,12 @@ const AboutSection = () => {
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
                     <p className="text-base lg:text-lg">
-                        I am a versatile full stack web developer with
-                        a passion for creating interactive and responsive
-                        web applications. My expertise extends across
-                        JavaScript, React, Redux, Node.js, Express, Next.js,
-                        HTML, CSS, and Git. Additionally,
-                        I am an experienced mobile developer
-                        and a UI/UX designer. Whether it's web 
-                        development, mobile app development, or crafting 
-                        compelling UI/UX designs, I am dedicated to 
-                        delivering high-quality results.
+                    Hi, I'm Musny Mubarak from Sri Lanka.
+                    I’m a web developer who specializes in 
+                    creating visually engaging and user-friendly
+                     websites. My expertise spans both front-end and 
+                     back-end development, allowing me to build 
+                     comprehensive web solutions from scratch.
                     </p>
                     <div className="flex flex-row justify-start mt-8">
                         <TabButton

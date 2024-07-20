@@ -15,6 +15,15 @@ const projectsData = [
     previewUrl: "/",
   },
   {
+    id: 3,
+    title: "My Portfolio Website",
+    description: "",
+    image: "/images/projects/3.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/musnymubarak/my-portfolio",
+    previewUrl: "/",
+  },
+  {
     id: 2,
     title: "Booking App",
     description: "",
@@ -23,15 +32,7 @@ const projectsData = [
     gitUrl: "https://github.com/musnymubarak/booking-app",
     previewUrl: "/",
   },
-  {
-    id: 3,
-    title: "My Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/musnymubarak/my-portfolio",
-    previewUrl: "/",
-  },
+  
 ];
 
 const ProjectsSection = () => {

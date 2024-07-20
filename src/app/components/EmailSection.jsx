@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import FB from "../../../public/facebook.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -44,7 +45,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-5 md:my-12  gap-4 relative"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
@@ -59,12 +60,34 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/musnymubarak">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image
+              src={GithubIcon}
+              alt="Github Icon"
+              width={50}
+              height={50}
+              className="w-9 h-9" // Set a consistent size
+            />
           </Link>
           <Link href="https://www.linkedin.com/in/musny-mubarak/">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image
+              src={LinkedinIcon}
+              alt="Linkedin Icon"
+              width={30}
+              height={30}
+              className="w-9 h-9" // Set a consistent size
+            />
+          </Link>
+          <Link href="https://web.facebook.com/profile.php?id=100009862128934">
+            <Image
+              src={FB}
+              alt="Facebook Icon"
+              width={29}
+              height={24}
+              className="w-8 h-8" // Set a consistent size
+            />
           </Link>
         </div>
+
       </div>
       <div>
         {emailSubmitted ? (
@@ -74,55 +97,37 @@ const EmailSection = () => {
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
               <input
                 name="email"
                 type="email"
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
+                placeholder="Your email"
               />
             </div>
             <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
               <input
                 name="subject"
                 type="text"
                 id="subject"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
+                placeholder="Subject"
               />
             </div>
             <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
               <textarea
                 name="message"
                 id="message"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Message"
               />
             </div>
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 hover:bg-gradient-to-l hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white transition duration-300"
             >
               Send Message
             </button>

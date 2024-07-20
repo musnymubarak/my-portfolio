@@ -7,17 +7,16 @@ export async function POST(request) {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, // Your Gmail address
-      pass: process.env.GMAIL_PASS, // Your Gmail password or app-specific password
+      user: process.env.GMAIL_USER, 
+      pass: process.env.GMAIL_PASS, 
     },
   });
 
-  // Set up email data
   let mailOptions = {
-    from: email, // sender address
-    to: 'musnymohammed@gmail.com', // list of receivers
-    subject: subject, // Subject line
-    text: message, // plain text body
+    from: process.env.GMAIL_USER, // sender address (your email)
+    to: 'musnymohammed@gmail.com',
+    subject: subject, 
+    text: `You have received a new message from : ${email} \n\nSubject : ${subject}\n\nMessage : ${message}`, 
   };
 
   try {
