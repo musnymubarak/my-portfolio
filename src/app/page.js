@@ -17,13 +17,13 @@ export default function Home() {
         <section className="bg-gray-900  rounded-none  lg:mb-12 p-8 lg:p-12 w-full">
           <AchievementSection />
         </section>
-        <section className="bg-gray-700  rounded-none  py-8  lg:p-12 w-full">
+        <section className="bg-gray-700  rounded-md  py-8  lg:p-12 w-full">
           <AboutMe />
         </section>
         <section className="bg-gray-900  rounded-none  p-8 lg:p-12 w-full">
           <Projects />
         </section>
-        <section className="bg-gray-700  rounded-none  p-8 lg:p-12 w-full">
+        <section className="bg-gray-700  rounded-md  p-8 lg:p-12 w-full">
           <EmailSection />
         </section>
       </div>
