@@ -32,6 +32,15 @@ const projectsData = [
     gitUrl: "https://github.com/musnymubarak/booking-app",
     previewUrl: "/",
   },
+  {
+    id: 4,
+    title: "VMA Studio",
+    description: "",
+    image: "/images/projects/4.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/musnymubarak/vma",
+    previewUrl: "https://vma-studio.com/",
+  }
   
 ];
 
