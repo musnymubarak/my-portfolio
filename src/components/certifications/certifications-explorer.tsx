@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 
 import type { Certification } from '@/content/types'
 import { CertificationCard } from './certification-card'
+import { IssuerLogo } from './issuer-logo'
 import { displayIssuer } from '@/content/certifications'
 import { cn } from '@/lib/utils'
 
@@ -51,6 +52,7 @@ export function CertificationsExplorer({
               key={option}
               label={displayIssuer(option)}
               count={counts.get(option) ?? 0}
+              issuer={option}
               active={issuer === option}
               onSelect={() => setIssuer(option)}
             />
@@ -82,11 +84,13 @@ function Chip({
   label,
   count,
   active,
+  issuer,
   onSelect,
 }: {
   label: string
   count: number
   active: boolean
+  issuer?: string
   onSelect: () => void
 }) {
   return (
@@ -95,13 +99,14 @@ function Chip({
       onClick={onSelect}
       aria-pressed={active}
       className={cn(
-        'inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.8125rem] font-medium transition-colors duration-200',
+        'inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.8125rem] font-medium transition-colors duration-200',
         active
           ? 'border-signal-400/50 bg-signal-400/12 text-signal-200'
           : 'border-[var(--hairline-strong)] bg-base-900 text-ink-400 hover:border-ink-600 hover:text-ink-100',
       )}
     >
-      {label}
+      {issuer && <IssuerLogo issuer={issuer} className="size-3.5 shrink-0" />}
+      <span>{label}</span>
       <span className={cn('font-mono text-[0.6875rem]', active ? 'text-signal-300' : 'text-ink-600')}>
         {count}
       </span>
